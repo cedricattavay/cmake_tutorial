@@ -25,5 +25,5 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../lib)
 add_executable( myExe ${header_list} ${source_list})
 
 # Link libraries
-target_link_libraries(myExe animals)
+target_link_libraries(myExe animals breeds)
 

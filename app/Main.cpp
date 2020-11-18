@@ -12,6 +12,7 @@ int main() {
 
     animals::CDog l_MyDog("milou");
     std::cout << "My dog is " << l_MyDog.GetName() << std::endl;
+    std::cout << "The breed of my dog is " << l_MyDog.GetBreed() << std::endl;
 
     return 0;
 }

@@ -8,6 +8,7 @@ project( "sample" VERSION 1.0.0 )
 # Here to do all the stuff which are common to app & lib
 
 # Each subdirectory should contain a CMakeLists.txt
+add_subdirectory( extLib )
 add_subdirectory( app )
 add_subdirectory( lib )
 

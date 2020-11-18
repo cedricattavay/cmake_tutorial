@@ -1,26 +1,25 @@
-#ifndef _animals_CDog_
-#define _animals_CDog_
+#ifndef _breeds_CBreed_
+#define _breeds_CBreed_
 
-//! \file Dog.h
-//! \brief Defines CDog
+//! \file Breeds.h
+//! \brief Defines CBreed
 //! \author http://www.surgiqual-institute.com/
 //! \date November 2020
 
 
 // Qt
 
+// Project dependencies
 #include <string>
 
-// Project dependencies
 
-
-namespace animals
+namespace breeds
 {
     //----------------------------------------------------------------------------------------
-    /*! \class CDog
+    /*! \class CBreed
      *! \brief \todo Add a brief
      *///-------------------------------------------------------------------------------------
-    class CDog
+    class CBreed
     {
 
     public:
@@ -28,47 +27,43 @@ namespace animals
         //------------------------------------------------------------------------------------
         /*! Default constructor
          *///---------------------------------------------------------------------------------
-        explicit CDog(const std::string& p_Name="", int p_Breed = 0);
+        explicit CBreed() = default;
 
         //------------------------------------------------------------------------------------
         /*! Copy constructor
          *! \param[in] p_Other Object to copy
          *///---------------------------------------------------------------------------------
-        CDog(const CDog& p_Other) = default; // To implement if copying is non-trivial
+        CBreed(const CBreed& p_Other) = default; // To implement if copying is non-trivial
 
         //! \brief Copy assignment operator
         //! \param[in] p_Other Object to copy
-        CDog& operator=(const CDog& p_Other) = default; // To implement if copying is non-trivial
+        CBreed& operator=(const CBreed& p_Other) = default; // To implement if copying is non-trivial
 
         //------------------------------------------------------------------------------------
         /*! Destructor
          *///---------------------------------------------------------------------------------
-        virtual ~CDog() = default;
+        virtual ~CBreed() = default;
 
         //------------------------------------------------------------------------------------
         /*! Move constructor
          *! \param[in] p_Other Object to move
          *///---------------------------------------------------------------------------------
-        CDog(CDog&& p_Other) = default; // To implement if moving is non trivial
+        CBreed(CBreed&& p_Other) = default; // To implement if moving is non trivial
 
         //------------------------------------------------------------------------------------
         /*! Move assignment operator
          *! \param[in] p_Other Object to move
          *///---------------------------------------------------------------------------------
-        CDog& operator=(CDog&& p_Other) = default; // To implement if moving is non trivial
+        CBreed& operator=(CBreed&& p_Other) = default; // To implement if moving is non trivial
 
-        const std::string& GetName();
-
-        std::string GetBreed();
+        std::string Int2String(int p_breed);
 
     protected:
 
     private:
-        std::string m_Name;
-        int m_Breed;
 
     };
 
-} // animals
+} // breeds
 
-#endif // _animals_CDog_
+#endif // _breeds_CBreed_

@@ -5,8 +5,13 @@
 
 
 #include <iostream>
+#include <animals/Dog.h>
 
 int main() {
-    std::cout << "Hello World!";
+    std::cout << "Hello World!" <<std::endl;
+
+    animals::CDog l_MyDog("milou");
+    std::cout << "My dog is " << l_MyDog.GetName() << std::endl;
+
     return 0;
 }
